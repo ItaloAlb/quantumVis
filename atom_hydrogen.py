@@ -7,7 +7,7 @@ from math import factorial, sqrt, cos, exp, pi, pow, acos, prod
 a0 = 0.5
 
 # Quantum numbers
-n, l, m = 10, 5, 1
+n, l, m = 3, 2, 1
 
 # A handle to legendre and laguerre polynomials
 class Polynomial:
@@ -49,8 +49,8 @@ class Hydrogen:
                pow(Polynomial.assoc_legendre(abs(m), l, cos(theta)), 2) / (4 * pi * factorial(l + abs(m)))
 
 def main():
-    # Just a random function that fits well for limit space coordinates
-    limit = n ** 2 + 2 * (l + m)
+    # Just a random function that fits well for some quantum numbers to limit space coordinates
+    limit = 4 * (2 * n + l)
 
     r, theta = np.linspace(0, limit), np.linspace(0, pi)
     Z = np.asarray([[Hydrogen.psi_squared(r0, theta0) for r0 in r] for theta0 in theta])
@@ -60,23 +60,30 @@ def main():
     points_to_plot = 15000
     points_counter = 0
 
-    x, z = [], []
+    x, y = [], []
 
     while points_counter < points_to_plot:
-        _x, _z = random.uniform(-limit, limit), random.uniform(-limit, limit)
-        _r = sqrt(_x ** 2 + _z ** 2)
-        _theta = acos(_z / _r)
+        _x, _y = random.uniform(-limit, limit), random.uniform(-limit, limit)
+        _r = sqrt(_x ** 2 + _y ** 2)
+        _theta = acos(_y / _r)
 
         _w = random.uniform(0, M)
         if _w <= Hydrogen.psi_squared(_r, _theta):
-            x.append(_x), z.append(_z)
+            x.append(_x), y.append(_y)
             points_counter += 1
-            print(points_counter)
 
     fig = plt.figure()
+
     ax = fig.add_subplot()
 
-    ax.scatter(x, z, s=0.1)
+    ax.set_title("Hydrogen orbital")
+
+    ax.scatter(x, y, s=0.1, color="black")
+
+    plt.xlabel("n = {n}, l = {l}, m = {m}".format(n = n, l = l, m = m))
+
+    plt.xticks([])
+    plt.yticks([])
 
     plt.show()
 
