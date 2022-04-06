@@ -74,27 +74,15 @@ class Plot:
         if len(args) > 6:
             ax, x, y, z, title, xlabel, ylabel, zlabel = args
             ax.plot_surface(x, y, z, cmap='viridis')
-
             ax.set_title(title)
-
-            ax.set_xticks([])
-            ax.set_yticks([])
-            ax.set_zticks([])
-
-            ax.set_xlabel(xlabel)
-            ax.set_ylabel(ylabel)
-            ax.set_zlabel(zlabel)
+            ax.set_xticks([]), ax.set_yticks([]), ax.set_zticks([])
+            ax.set_xlabel(xlabel), ax.set_ylabel(ylabel), ax.set_zlabel(zlabel)
         else:
             ax, x, y, title, xlabel, ylabel = args
             ax.plot(x, y)
             ax.set_title(title)
-
-            ax.set_xticks([])
-            ax.set_yticks([])
-
-            ax.set_xlabel(xlabel)
-            ax.set_ylabel(ylabel)
-
+            ax.set_xticks([]), ax.set_yticks([])
+            ax.set_xlabel(xlabel), ax.set_ylabel(ylabel)
 
 def main():
     # Just modify the quantum numbers n, p and the spacial parameters l, h

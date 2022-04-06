@@ -7,7 +7,7 @@ from math import factorial, sqrt, cos, exp, pi, pow, acos, prod
 a0 = 0.5
 
 # Quantum numbers
-n, l, m = 3, 2, 1
+n, l, m = 4, 2, 1
 
 # A handle to legendre and laguerre polynomials
 class Polynomial:
@@ -48,6 +48,8 @@ class Hydrogen:
                pow(Polynomial.assoc_laguerre(2 * l + 1, n - l - 1, _p), 2) * (2 * l + 1) * factorial(l - abs(m)) * \
                pow(Polynomial.assoc_legendre(abs(m), l, cos(theta)), 2) / (4 * pi * factorial(l + abs(m)))
 
+
+# Monte-Carlo method implementation
 def main():
     # Just a random function that fits well for some quantum numbers to limit space coordinates
     limit = 4 * (2 * n + l)
@@ -57,7 +59,7 @@ def main():
 
     M = np.max(Z) * 1.05
 
-    points_to_plot = 15000
+    points_to_plot = 10000
     points_counter = 0
 
     x, y = [], []
@@ -82,8 +84,7 @@ def main():
 
     plt.xlabel("n = {n}, l = {l}, m = {m}".format(n = n, l = l, m = m))
 
-    plt.xticks([])
-    plt.yticks([])
+    plt.xticks([]), plt.yticks([])
 
     plt.show()
 
