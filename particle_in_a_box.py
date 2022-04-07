@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 from math import sqrt, sin, pi, cos
 
 class WaveFunction:
-    def __init__(self, n, lx, p=0, ly=0):
+    def __init__(self, n, p=0):
         self.smoothness = 100
 
         self.n, self.p = n, p
-        self.lx, self.ly = lx, ly
+        self.lx, self.ly = 1, 1
 
         self.psi = np.asarray([[self._psi(xi, yi) for xi in self.x] for yi in self.y])
 
@@ -85,19 +85,18 @@ class Plot:
             ax.set_xlabel(xlabel), ax.set_ylabel(ylabel)
 
 def main():
-    # Just modify the quantum numbers n, p and the spacial parameters l, h
+    # Just modify the quantum numbers n, p
 
-    n, p = 3, 0
-    l, h = 1, 1
+    n, p = 2, 2
 
-    wave_function = WaveFunction(n, l, p, h)
+    wave_function = WaveFunction(n, p)
     if wave_function.p == 0 or wave_function.ly == 0:
         fig = plt.figure(figsize=plt.figaspect(0.5))
         ax1, ax2 = fig.subplots(1, 2)
         x, y = wave_function.x, wave_function.psi[0]
 
-        Plot(ax1, x, y, r'$\psi(x)$', "L", r'$\psi(x)$')
-        Plot(ax2, x, y ** 2, r'$|\psi(x)|^2$', "L", r'$|\psi(x)|^2$')
+        Plot(ax1, x, y, "n = {n}".format(n=n), "L", r'$\psi(x)$')
+        Plot(ax2, x, y ** 2, "n = {n}".format(n=n), "L", r'$|\psi(x)|^2$')
 
         plt.show()
         return
@@ -107,8 +106,8 @@ def main():
     ax2 = fig.add_subplot(1, 2, 2, projection='3d')
     x, y = np.meshgrid(wave_function.x, wave_function.y)
     z = wave_function.psi
-    Plot(ax1, x, y, z, r'$\Psi(x, y)$', "L", "H", r'$\Psi(x, y)$')
-    Plot(ax2, x, y, z ** 2, r'$|\Psi(x, y)|^2$', "L", "H", r'$|\Psi(x, y)|^2$')
+    Plot(ax1, x, y, z, "n = {n}, p = {p}".format(n=n, p=p), "L", "H", r'$\Psi(x, y)$')
+    Plot(ax2, x, y, z ** 2, "n = {n}, p = {p}".format(n=n, p=p), "L", "H", r'$|\Psi(x, y)|^2$')
     plt.show()
     return
 
