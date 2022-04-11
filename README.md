@@ -1,4 +1,4 @@
 # quantumVis
 Some scripts to work with quantum visualization.
 
-![](wave.gif)
+![With wave_packet.py you can visualize a time evolution of a wave packet.](wave.gif)
