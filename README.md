@@ -2,7 +2,7 @@
 Some scripts to work with quantum visualization.
 
 ## Summary
-1.[Test](#-Test)
+1.[Test](#test)
 
 
 With particle_in_a_box.py you can visualize the wave function and the probability distribution around the space of a particle confined in a box, just by setting some quantum numbers.
