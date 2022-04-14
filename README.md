@@ -9,6 +9,8 @@ Some scripts to work with quantum visualization.
 
 ## Dependencies
 
+To work with this project your python interpreter must have [Matplotlib](https://matplotlib.org/) and [Numpy](https://numpy.org/) installed.
+
 ## Particle in a box
 
 With [particle_in_a_box.py](particle_in_a_box.py) you can visualize the wave function and the probability distribution around the space of a particle confined in a box, just by setting some quantum numbers.
