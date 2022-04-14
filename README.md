@@ -1,10 +1,13 @@
 ## quantumVis
 Some scripts to work with quantum visualization.
 
-## Summary
+## Table of Contents
+- [Dependencies](#dependencies)
 - [Particle in a box](#particle-in-a-box)
 - [Time evolution of a gaussian wave packet](#time-evolution-of-a-gaussian-wave-packet)
 - [Hydrogen orbitals](#hydrogen-orbitals)
+
+## Dependencies
 
 ## Particle in a box
 
