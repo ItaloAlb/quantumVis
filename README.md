@@ -12,9 +12,8 @@ With [particle_in_a_box.py](particle_in_a_box.py) you can visualize the wave fun
 
 <p align="center">
   <img src="imgs/fig1.png"/>
+  <img src="imgs/fig2.png"/>
 </p>
-
-<img src="imgs/fig2.png"/>
 
 ## Time evolution of a gaussian wave packet
 
