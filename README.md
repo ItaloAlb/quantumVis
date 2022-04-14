@@ -19,7 +19,10 @@ With [particle_in_a_box.py](particle_in_a_box.py) you can visualize the wave fun
 
 With wave_packet.py you can visualize time evolution of a wave packet.
 
-<img src="imgs/wave.gif"/>
+<p align="center">
+  <img src="imgs/wave.gif"/>
+</p>
+
 
 And you can also see a tunneling effect too. Only by setting some potential energy.
 
