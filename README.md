@@ -10,12 +10,12 @@ Some scripts to work with quantum visualization.
 ## Dependencies
 
 To work with this project your python interpreter must have [Matplotlib](https://matplotlib.org/) and [Numpy](https://numpy.org/) installed.
-´´´
+```
   pip install matplotlib
-´´´
-´´´
+```
+```
   pip install numpy
-´´´
+```
 
 ## Particle in a box
 
