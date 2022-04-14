@@ -2,7 +2,7 @@
 Some scripts to work with quantum visualization.
 
 ## Summary
-- [Particle in a box](#particle-in-abox)
+- [Particle in a box](#particle-in-a-box)
 
 ## Particle in a box
 
