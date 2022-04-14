@@ -1,4 +1,4 @@
-# quantumVis
+## quantumVis
 Some scripts to work with quantum visualization.
 
 ## Particle in a Box
