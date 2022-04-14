@@ -7,6 +7,7 @@ Some scripts to work with quantum visualization.
 - [Time evolution of a gaussian wave packet](#time-evolution-of-a-gaussian-wave-packet)
 - [Hydrogen orbitals](#hydrogen-orbitals)
 - [License](#license)
+- [Contact](#contact)
 
 ## Dependencies
 
