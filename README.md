@@ -6,6 +6,7 @@ Some scripts to work with quantum visualization.
 - [Particle in a box](#particle-in-a-box)
 - [Time evolution of a gaussian wave packet](#time-evolution-of-a-gaussian-wave-packet)
 - [Hydrogen orbitals](#hydrogen-orbitals)
+- [License](#license)
 
 ## Dependencies
 
@@ -54,3 +55,7 @@ Last and not least, with [atom_hydrogen.py](atom_hydrogen.py), you can plot hydr
 </p>
 
 Since the wave function of an electron of hydrogen can be found around all the space (-∞, ∞), you need to limit the space around some values where the wave function isn't too close to zero. This values are find using a function created by me. It works just for some low n, m, l values. Maybe you need to adjust if you want to test with some larger n, m, l quantum numbers.
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
