@@ -59,3 +59,7 @@ Since the wave function of an electron of hydrogen can be found around all the s
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Italo Albuquerque - [@Italoc_Alb](https://twitter.com/Italoc_Alb) - italoc.alb@gmail.com
