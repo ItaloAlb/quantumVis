@@ -11,7 +11,7 @@ Some scripts to work with quantum visualization.
 
 ## Dependencies
 
-To work with this project your python interpreter must have [Matplotlib](https://matplotlib.org/)(v3.5.1) and [Numpy](https://numpy.org/)(v1.22.2) installed. If you don't have, just pip install them.
+To work with this project your python interpreter must have [Matplotlib](https://matplotlib.org/) (v3.5.1) and [Numpy](https://numpy.org/) (v1.22.2) installed. If you don't have, just pip install them.
 ```
   pip install matplotlib
 ```
