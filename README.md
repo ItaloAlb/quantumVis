@@ -62,4 +62,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Italo Albuquerque - [@Italoc_Alb](https://twitter.com/Italoc_Alb) - italoc.alb@gmail.com
+Italo Albuquerque - [@italoc_alb](https://twitter.com/italoc_alb) - italoc.alb@gmail.com
