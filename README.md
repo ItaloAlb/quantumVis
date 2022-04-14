@@ -1,14 +1,14 @@
 ## quantumVis
 Some scripts to work with quantum visualization.
 
-## Particle in a Box
+## Particle in a box
 
 With particle_in_a_box.py you can visualize the wave function and the probability distribution around the space of a particle confined in a box, just by setting some quantum numbers.
 ![](fig1.png)
 
 ![](fig2.png)
 
-## Time Evolution of a Gaussian Wave Packet
+## Time evolution of a gaussian wave packet
 
 With wave_packet.py you can visualize time evolution of a wave packet.
 ![](wave.gif)
@@ -17,7 +17,7 @@ And you can also see a tunneling effect too. Only by setting some potential ener
 
 ![](wave2.gif)
 
-## Hydrogen Orbitals
+## Hydrogen orbitals
 
 Last and not least, with atom_hydrogen.py, you can plot hydrogen orbital setting the quantum numbers n, m, l. It take a while to compute all the points, because the algorithm use a monte-carlo method to find all the points (over 10k points). Below you can see some results. 
 
