@@ -44,7 +44,7 @@ And you can also see a tunneling effect too. Only by setting some potential ener
   <img src="imgs/wave2.gif"/>
 </p>
 
-To do those simulations, i'm using a numerical method called second order runge-kutta. You're able to play with some variables values, but make sure <img src="https://render.githubusercontent.com/render/math?math=\color{white}\dfrac{\Delta%20t}{\Delta%20x%20^%202}%20%3C%201#gh-dark-mode-only"/> . This is a restriction inherit from the method that i choose.
+To do those simulations, i'm using a numerical method called second order runge-kutta. You're able to play with some variables values, but make sure <img src="https://render.githubusercontent.com/render/math?math=\dfrac{\Delta%20t}{\Delta%20x%20^%202}%20%3C%201#gh-light-mode-only"/> <img src="https://render.githubusercontent.com/render/math?math=\color{white}\dfrac{\Delta%20t}{\Delta%20x%20^%202}%20%3C%201#gh-dark-mode-only"/> . This is a restriction inherit from the method that i choose.
 
 ## Hydrogen orbitals
 
