@@ -21,12 +21,14 @@ class WaveFunction:
 
         self.v = lambda x: self.v0 if self.vx0 <= x <= self.vxn else 0  # Lambda function for potential v(i)
 
-        self.dx, self.dt, self.x0, self.xn, self.t0, self.tn = 0.02, 0.0001, -1, 1, 0, 0.02  # Steps and boundary
+        self.dx, self.dt, self.x0, self.xn, self.t0, self.tn = 0.02, 0.0001, -1, 1, 0, 0.03  # Steps and boundary
         # conditions
 
         self.i, self.n = int((self.xn - self.x0) / self.dx), int((self.tn - self.t0) / self.dt)  # How many steps
 
         self.x = np.linspace(self.x0, self.xn, self.i)  # Spatial array
+
+        self.t = np.linspace(self.t0, self.tn, self.n)  # Temporal array
 
         self.v = np.asarray([self.v(i) for i in self.x])  # Potential array along space v[i]
 
@@ -35,6 +37,8 @@ class WaveFunction:
 
         self.re_psi = np.asarray([self.repsi(i) for i in self.x])
         self.im_psi = np.asarray([self.impsi(i) for i in self.x])
+
+        self.int_psi_squared = np.asarray([])
 
     @property
     def re_psi(self):
@@ -136,17 +140,38 @@ def main():
                        verticalalignment='center',
                        transform=ax_psi.transAxes)
 
+    def init():
+        re_psi.set_data(wave_function.x, wave_function.re_psi)
+        im_psi.set_data(wave_function.x, wave_function.im_psi)
+        psi_squared.set_data(wave_function.x, wave_function.psi_squared)
+
+        return re_psi, im_psi, psi_squared, time
+
     def update(frame):
         re_psi.set_data(wave_function.x, wave_function.re_psi)
         im_psi.set_data(wave_function.x, wave_function.im_psi)
         psi_squared.set_data(wave_function.x, wave_function.psi_squared)
         time.set_text("time={t:.4f}s".format(t=frame * wave_function.dt))
 
+        wave_function.int_psi_squared = np.append(wave_function.int_psi_squared,
+                                                  np.sum(wave_function.psi_squared) * wave_function.dx)
+
         wave_function.update()
 
         return re_psi, im_psi, psi_squared, time
 
-    ani = FuncAnimation(fig, update, frames=wave_function.n, blit=True, repeat=False, interval=100)
+    ani = FuncAnimation(fig, update, frames=wave_function.n, init_func=init, blit=True, repeat=False, interval=50)
+
+    plt.show()
+
+    plt.title("Time evolution of gaussian wave packet normalization")
+
+    plt.xlabel("t")
+    plt.ylabel(r"$\int|\Psi(x,t)|^2dx$")
+
+    plt.ylim(0, 4)
+
+    plt.plot(wave_function.t, wave_function.int_psi_squared)
 
     plt.show()
 
