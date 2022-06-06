@@ -48,7 +48,7 @@ To do those simulations, i'm using a numerical method called second order runge-
 
 ## Hydrogen orbitals
 
-Last and not least, with [atom_hydrogen.py](atom_hydrogen.py), you can plot hydrogen orbital setting the quantum numbers n, m, l. It take a while to compute all the points, because the algorithm use a monte-carlo method to find all the points (over 10k points). Below you can see some results. 
+Last and not least, with [atom_hydrogen.py](atom_hydrogen.py), you can plot hydrogen orbital by setting the quantum numbers n, m, l. It take a while to compute all the points (and none parallel optimization was done), because the algorithm use a monte-carlo method to find all the points (over 10k points). Below you can see some results. 
 
 <p align="center">
   <img src="imgs/fig3.png"/>
